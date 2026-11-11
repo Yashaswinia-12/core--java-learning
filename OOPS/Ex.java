@@ -28,7 +28,7 @@ class CreditCard extends Payment{
 public class Ex {
     public static void main(String[] args) {
         Payment payment=new PhonePay();
-        payment.pay(200);   
+           
     }
 }
 

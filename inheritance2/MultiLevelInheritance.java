@@ -37,6 +37,5 @@ public class MultiLevelInheritance {
     System.out.println(ev.batCap);
         
     }
-  
 
 }
