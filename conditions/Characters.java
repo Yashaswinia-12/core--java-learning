@@ -24,7 +24,7 @@ public class Characters {
         ref.sub();
         System.out.println(2<<2);
         System.out.println(3<<3);
-        System.out.println(10>>3);
+        System.out.println(10>>3);  
 
 
         }
