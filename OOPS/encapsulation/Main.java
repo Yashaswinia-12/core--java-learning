@@ -8,6 +8,7 @@ public class Main {
         System.out.println(bank.getBalance());
         bank.deposit(400);
         System.out.println(bank.getBalance());
+        System.out.println(bank.getBalance());
     }
 
 }
