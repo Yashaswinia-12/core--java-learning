@@ -1,4 +1,4 @@
-package exceptionHandling;
+package exceptionhandling;
 
 public class ThrowandThrowsKey {
 
