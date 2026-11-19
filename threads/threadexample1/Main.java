@@ -4,9 +4,17 @@ class A extends Thread{
     public void run(){
     
         for(int i=1;i<=10;i++){
+            try{
+                Thread.sleep(100);
+                
+                System.out.println(Thread.currentThread().getName());
+            }
+            catch(InterruptedException e){
+            System.out.println("Handle");
+        }
+
 
            
-                System.out.println(Thread.currentThread().getName());
 
             
             
@@ -16,6 +24,7 @@ class A extends Thread{
 }
 class B extends Thread{
     public void run(){
+        
         
         for(int i=11;i<=20;i++){
              
@@ -41,28 +50,27 @@ class C extends Thread{
 }
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args)throws InterruptedException{
         A a=new A();
-        a.setPriority(Thread.MIN_PRIORITY);
+        System.out.println(a.getState());
         a.start();
-        B b=new B();
-        b.setPriority(Thread.MIN_PRIORITY);
-        b.start();
-        C c=new C();
-        c.setPriority(Thread.MAX_PRIORITY);
-        c.start();
+        System.out.println(a.getState());
+        a.sleep(10000);
+        System.out.println(a.getState());
+        a.join();
+        System.out.println(a.getState());
 
-        try{
-            c.start();
-            c.join();
-            a.start();
-            a.join();
-            b.start();
-            b.join();
-        }
-        catch(InterruptedException e){
-            System.out.println("Handle");
-        }
+        //try{
+           // c.start();
+           // c.join();
+           // a.start();
+            //a.join();
+           // b.start();
+            //b.join();
+       // }
+        //catch(InterruptedException e){
+           // System.out.println("Handle");
+        //}
 
     }
 
