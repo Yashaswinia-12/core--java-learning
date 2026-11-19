@@ -38,6 +38,6 @@ public class Main {
         B b=new B();
         Thread t2=new Thread();
         t2.start();
-    }
+    }  
 
 }
