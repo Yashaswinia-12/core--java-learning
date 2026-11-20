@@ -12,13 +12,19 @@ public class PhonePay extends Thread{
 
     public void disp(){
         if(op=="withdraw"){
+            try{
             bank.withdraw(amount);
-            bank.getBal();
+            
+            }
+            catch(BankException e){
+                System.out.println(e.getMessage());
+
+            }
         }
         else if(op=="deposite"){
             bank.deposite(amount);
-            bank.getBal();
         }
+            
         else if(op=="balance"){
             bank.getBal();
         }

@@ -3,13 +3,13 @@ package threads.banksystem;
 public class Bank {
     private  int balance=1000;
 
-    synchronized public void withdraw(int amount){
+    synchronized public void withdraw(int amount)throws BankException{
         if(amount<=balance){
             System.out.println(amount+ " withdraw");
             balance-=amount;
         }
         else{
-            System.out.println("insuffient amount");
+            throw new BankException("insuffient amount");
         }
     }
 
