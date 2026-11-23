@@ -15,9 +15,12 @@ class Student implements Comparable<Student>{
         this.marks=marks;
 
     }
-     @Override
-    public  int compareTo(Student o){
-        return this.marks-o.marks;
+   //  @Override
+    //public  int compareTo(Student o){
+      //  return this.marks-o.marks;
+    //}
+    public int compareTo(Student o){
+        return this.name.compareTo(o.name);
     }
      @Override
      public String toString(){
