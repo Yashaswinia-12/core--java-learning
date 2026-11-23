@@ -23,7 +23,7 @@ public class ATM extends Thread {
         
         else if(op=="deposite"){
             bank.deposite(amount);
-            
+                                                                                                                                                                                                                                                 
         }
         else if(op=="balance"){
             bank.getBal();
