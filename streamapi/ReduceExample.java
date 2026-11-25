@@ -26,6 +26,24 @@ public class ReduceExample {
         int sum2=stream.reduce(0,(a,b)->a+b);
         System.out.println(sum2);
 
+        Consumer<Integer> consumer=new Consumer<>(){
+            public void accept(Integer a){
+                System.out.println(a);
+
+            }
+
+        } ;
+        list.forEach(consumer);
+
+        Consumer<Integer> consumer2=(a)->System.out.println(a);
+
+        list.forEach(consumer2);
+
+        int sum3=list.stream().filter(n->n%2==0).map(n->n*n).reduce(0,(a,b)->a+b);
+        System.out.println(sum3);
+
+
+
         
     
         
